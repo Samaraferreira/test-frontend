@@ -1,8 +1,9 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
-import './styles.css'
+import { ClinicList } from './pages'
+import './styles/global.css'
 
 ReactDOM.render(
-  <h1>Hello</h1>,
+  <ClinicList />,
   document.getElementById('root')
 )

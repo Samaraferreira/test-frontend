@@ -1,0 +1,49 @@
+:root {
+  --color-white: #FAFAFA;
+  --color-background: #F1F2F3;
+  --color-primary-light: #C0E5C8;
+  --color-primary: #56AAB6;
+  --color-primary-dark: #2793A1;
+  --color-primary-darker: #2793A1;
+  --color-secondary: #EFC0C0;
+  --color-secondary-dark: #B73838;
+  --color-title: #000000;
+  --color-text: #555454;
+  --color-input-background: #EFF2EF;
+  --color-button-text: #FFFFFF;
+
+  --max-width: 1000px;
+  --padding: 24px;
+  font-size: 60%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+html, body, #root {
+  height: 100vh;
+}
+
+body {
+  background: var(--color-background);
+}
+
+body,
+button,
+input,
+textarea {
+  font: 500 1.6rem Roboto;
+  -webkit-font-smoothing: antialiased;
+  border: 0;
+}
+
+.container {
+  /* width: 90vw; */
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--padding);
+}
