@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
-import { ClinicList } from './pages'
+import { List as ListPage } from './pages'
 import './styles/global.css'
 
 ReactDOM.render(
-  <ClinicList />,
+  <ListPage />,
   document.getElementById('root')
 )

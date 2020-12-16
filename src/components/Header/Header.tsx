@@ -1,13 +1,13 @@
 import React from 'react'
 import logo from '@/pages/assets/logo.svg'
 import logoSm from '@/pages/assets/logo-sm.svg'
-import iconPlus from '@/pages/assets/icon-plus.svg'
+import iconPlus from '@/pages/assets/icons/icon-plus.svg'
 import './styles.css'
 
 const Header: React.FC = () => {
   return (
-    <header className="headerWrap">
-      <div className="headerContent">
+    <header className="header-wrap">
+      <div className="header-content">
         <div>
           <picture>
             <source media="(max-width: 600px)" srcSet={logoSm} />

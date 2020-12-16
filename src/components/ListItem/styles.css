@@ -1,0 +1,82 @@
+
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: 20px;
+  padding: 24px 32px;
+}
+
+.item .item__infos {
+  width: 42%;
+}
+
+.item .item__infos > h3 {
+  margin-bottom: 16px;
+}
+
+.item .item__infos .address {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.item .item__infos .address img {
+  padding-right: 8px;
+}
+
+.badges {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 8px;
+}
+
+.whatsapp {
+  width: 154px;
+  height: 56px;
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.8s;
+}
+
+.badge-wrap {
+  padding: 8px 16px;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-darker);
+  border-radius: 20px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.badge-wrap--red {
+  background-color: var(--color-secondary);
+  color: var(--color-secondary-dark);
+}
+
+@media (max-width: 900px) {
+  .item .item__infos {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 578px) {
+  .whatsapp {
+    width: 100%;
+    margin-top: 16px;
+  }
+}

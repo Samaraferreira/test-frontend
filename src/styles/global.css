@@ -4,16 +4,18 @@
   --color-primary-light: #C0E5C8;
   --color-primary: #56AAB6;
   --color-primary-dark: #2793A1;
-  --color-primary-darker: #2793A1;
-  --color-secondary: #EFC0C0;
-  --color-secondary-dark: #B73838;
+  --color-primary-darker: #237f8b;
+  --color-secondary: #FAAEAE;
+  --color-secondary-dark: #af3434;
   --color-title: #000000;
   --color-text: #555454;
   --color-input-background: #EFF2EF;
+  --color-input-border: #EBEDEA;
   --color-button-text: #FFFFFF;
 
   --max-width: 1000px;
   --padding: 24px;
+  --padding-sm: 16px;
   font-size: 60%;
 }
 
@@ -22,10 +24,6 @@
   padding: 0;
   box-sizing: border-box;
   outline: 0;
-}
-
-html, body, #root {
-  height: 100vh;
 }
 
 body {
@@ -42,8 +40,15 @@ textarea {
 }
 
 .container {
-  /* width: 90vw; */
+  width: 100%;
   max-width: var(--max-width);
-  margin: 0 auto;
+  margin: 32px auto;
   padding: 0 var(--padding);
+}
+
+@media (max-width: 400px) {
+  .container {
+    margin: 24px auto;
+    padding: 0 var(--padding-sm);
+  }
 }
