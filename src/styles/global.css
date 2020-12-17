@@ -1,17 +1,17 @@
 :root {
-  --color-white: #FAFAFA;
-  --color-background: #F1F2F3;
-  --color-primary-light: #C0E5C8;
-  --color-primary: #56AAB6;
-  --color-primary-dark: #2793A1;
+  --color-white: #fafafa;
+  --color-background: #f1f2f3;
+  --color-primary-light: #c0e5c8;
+  --color-primary: #56aab6;
+  --color-primary-dark: #2793a1;
   --color-primary-darker: #237f8b;
-  --color-secondary: #FAAEAE;
+  --color-secondary: #faaeae;
   --color-secondary-dark: #af3434;
   --color-title: #000000;
   --color-text: #555454;
-  --color-input-background: #EFF2EF;
-  --color-input-border: #EBEDEA;
-  --color-button-text: #FFFFFF;
+  --color-input-background: #eff2ef;
+  --color-input-border: #ebedea;
+  --color-button-text: #ffffff;
 
   --max-width: 1000px;
   --padding: 24px;
@@ -37,6 +37,10 @@ textarea {
   font: 500 1.6rem Roboto;
   -webkit-font-smoothing: antialiased;
   border: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {

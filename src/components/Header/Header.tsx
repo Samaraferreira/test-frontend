@@ -1,7 +1,7 @@
 import React from 'react'
-import logo from '@/pages/assets/logo.svg'
-import logoSm from '@/pages/assets/logo-sm.svg'
-import iconPlus from '@/pages/assets/icons/icon-plus.svg'
+import logo from '@/assets/logo.svg'
+import logoSm from '@/assets/logo-sm.svg'
+import iconPlus from '@/assets/icons/icon-plus.svg'
 import './styles.css'
 
 const Header: React.FC = () => {

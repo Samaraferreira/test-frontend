@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './styles.css'
 import { Header, ListItem } from '@/components'
-import iconSearch from '@/pages/assets/icons/icon-search.svg'
-import iconFilter from '@/pages/assets/icons/icon-filter.svg'
-import iconSort from '@/pages/assets/icons/icon-sort.svg'
+import iconSearch from '@/assets/icons/icon-search.svg'
+import iconFilter from '@/assets/icons/icon-filter.svg'
+import iconSort from '@/assets/icons/icon-sort.svg'
+import { ClinicModel } from '@/domain/ClinicModel'
+import api from '@/services/api'
 
 const List: React.FC = () => {
+  const [state, setState] = useState({
+    list: [] as ClinicModel[],
+    error: ''
+  })
+
+  useEffect(() => {
+    getListClinics()
+  }, [])
+
+  const getListClinics = async (): Promise<void> => {
+    const response = await api.get<ClinicModel[]>('/clinics')
+    setState({ ...state, list: response.data })
+  }
+
   return (
     <>
       <Header />
@@ -29,12 +45,9 @@ const List: React.FC = () => {
       </header>
       <div className="container">
         <ul className="clinic-list">
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
+          {state.list.map((item: ClinicModel) =>
+            <ListItem key={item.id} item={item} />
+          )}
         </ul>
       </div>
     </>
