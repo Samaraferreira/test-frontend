@@ -1,6 +1,7 @@
 :root {
   --color-white: #fafafa;
   --color-background: #f1f2f3;
+  --color-primary-lighter: #eaeaea;
   --color-primary-light: #c0e5c8;
   --color-primary: #56aab6;
   --color-primary-dark: #2793a1;
@@ -9,7 +10,7 @@
   --color-secondary-dark: #af3434;
   --color-title: #000000;
   --color-text: #555454;
-  --color-input-background: #eff2ef;
+  --color-input-background: #f5f5f5;
   --color-input-border: #ebedea;
   --color-button-text: #ffffff;
 
