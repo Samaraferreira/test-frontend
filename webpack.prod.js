@@ -39,9 +39,6 @@ module.exports = merge(common, {
     'react-router-dom': 'ReactRouterDOM'
   },
   plugins: [
-    new DefinePlugin({
-      'process.env.API_URL': JSON.stringify('http://localhost:3333')
-    }),
     new HtmlWebpackPlugin({
       template: './public/template.prod.html'
     }),
