@@ -1,7 +1,8 @@
 import React, { FormEvent, useState } from 'react';
-import { Checkbox, Input } from '@/components';
+import { Checkbox, Header, Input } from '@/components';
 import './styles.css'
 import api from '@/services/api';
+import { Link } from 'react-router-dom';
 
 const servicesArray = ['Exames Clínicos', 'Exames Complementares', 'PPRA', 'PCMSO']
 
@@ -58,6 +59,7 @@ const Register: React.FC = () => {
 
   return (
     <div id="page-register">
+      <Header />
       <section className="register-wrap">
         <header className="register__header">
           <h1>Cadastrar Clínica</h1>
@@ -111,7 +113,7 @@ const Register: React.FC = () => {
             <button type="submit" className="submit">
               Realizar cadastro
             </button>
-            <a className="go-back" href="#">Cancelar</a>
+            <Link className="go-back" to="/">Cancelar</Link>
           </footer>
         </form>
       </section>

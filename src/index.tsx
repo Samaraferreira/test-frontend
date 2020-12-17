@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
-import { List as ListPage, Register } from './pages'
-import './styles/global.css'
+import Routes from './routes'
+import '@/styles/global.css'
 
 ReactDOM.render(
-  <Register />,
+  <Routes />,
   document.getElementById('root')
 )

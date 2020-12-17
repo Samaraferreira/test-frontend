@@ -27,50 +27,53 @@ const ListItem: React.FC<Props> = ({ item }: Props) => {
     <li className="item">
       <div className="item__infos">
         <h3>{item.name}</h3>
-        <span>Email: {item.email}</span>
+        <strong>Email: </strong>
+        <span>{item.email}</span>
         <div className="address">
           <img className="icon" src={iconMaps} alt="Endereço" />
           <span>{item.address}</span>
         </div>
       </div>
-      <div className="badges">
-        <div
-          className={`badge-wrap ${
-            verifyService("Exames Clínicos") ? "badge-wrap--red" : ""
-          }`}
-        >
-          <span>Exame Clínico</span>
+      <aside>
+        <div className="badges">
+          <div
+            className={`badge-wrap ${
+              verifyService("Exames Clínicos") ? "badge-wrap--red" : ""
+            }`}
+          >
+            <span>Exame Clínico</span>
+          </div>
+          <div
+            className={`badge-wrap ${
+              verifyService("Exames Complementares") ? "badge-wrap--red" : ""
+            }`}
+          >
+            <span>Complementar</span>
+          </div>
+          <div
+            className={`badge-wrap ${
+              verifyService("PCMSO") ? "badge-wrap--red" : ""
+            }`}
+          >
+            <span>PCMCO</span>
+          </div>
+          <div
+            className={`badge-wrap ${
+              verifyService("PPRA") ? "badge-wrap--red" : ""
+            }`}
+          >
+            <span>PPRA</span>
+          </div>
         </div>
-        <div
-          className={`badge-wrap ${
-            verifyService("Exames Complementares") ? "badge-wrap--red" : ""
-          }`}
+        <a
+          className="whatsapp"
+          target="_blanck"
+          href={`https://wa.me/${cleanWhatsapp(item.whatsapp)}`}
         >
-          <span>Complementar</span>
-        </div>
-        <div
-          className={`badge-wrap ${
-            verifyService("PCMSO") ? "badge-wrap--red" : ""
-          }`}
-        >
-          <span>PCMCO</span>
-        </div>
-        <div
-          className={`badge-wrap ${
-            verifyService("PPRA") ? "badge-wrap--red" : ""
-          }`}
-        >
-          <span>PPRA</span>
-        </div>
-      </div>
-      <a
-        className="whatsapp"
-        target="_blanck"
-        href={`https://wa.me/${cleanWhatsapp(item.whatsapp)}`}
-      >
-        <img className="icon" src={iconWhatsapp} alt="Whatsapp" />
-        Whatsapp
-      </a>
+          <img className="icon" src={iconWhatsapp} alt="Whatsapp" />
+          Whatsapp
+        </a>
+      </aside>
     </li>
   );
 };
