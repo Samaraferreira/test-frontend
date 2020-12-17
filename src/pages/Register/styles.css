@@ -1,64 +1,25 @@
-
-.register-modal {
-  z-index: 999;
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100vh;
+.register-wrap {
   width: 100%;
-  max-width: 500px;
+  max-width: 800px;
   background-color: var(--color-white);
   box-shadow: 0px 4px 8px 2px rgba(207, 214, 212, 0.25);
-
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
+  margin: 32px auto;
 }
 
-.register-modal__header {
+.register__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px;
+  padding: 32px 32px 24px 32px;
   border-bottom: 1px solid var(--color-primary-light);
   color: var(--color-primary-dark);
 }
 
-.register-modal__close {
-  padding: 8px;
-  display: flex;
-  align-items: center;
-  border-radius: 100%;
-  background-color: var(--color-primary-lighter);
-  cursor: pointer;
-}
-
-.register-modal__close img {
-  width: 32px;
-}
-
 .form {
   flex: 1;
-  padding: 24px;
-}
-
-.form .input-block + .input-block {
-  margin-top: 10px;
-}
-
-.form .input-block label {
-  padding-left: 2px;
-}
-
-.form .input-block input {
-  display: block;
-  width: 100%;
-  margin-top: 8px;
-  padding: 8px 16px;
-  border-radius: 10px;
-  height: 56px;
-  background-color: var(--color-input-background);
-  border: 2px solid var(--color-input-border);
+  padding: 24px 32px;
 }
 
 .checkbox-wrap {
@@ -83,7 +44,7 @@
 }
 
 .form button.submit {
-  margin-top: 24px;
+  margin-top: 16px;
   width: 100%;
   height: 56px;
   background-color: var(--color-primary-dark);
@@ -93,4 +54,28 @@
   line-height: 19px;
   border-radius: 20px;
   cursor: pointer;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.message {
+  color: var(--color-text);
+}
+
+.go-back {
+  color: var(--color-primary-darker);
+  font-size: 20px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+@media (max-width: 740px) {
+  .register-wrap {
+    margin: 0 auto;
+  }
 }
