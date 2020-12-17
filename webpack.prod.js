@@ -39,6 +39,9 @@ module.exports = merge(common, {
     'react-router-dom': 'ReactRouterDOM'
   },
   plugins: [
+    new DefinePlugin({
+      'process.env.API_URL': JSON.stringify('https://api-clinics-test.herokuapp.com')
+    }),
     new HtmlWebpackPlugin({
       template: './public/template.prod.html'
     }),
