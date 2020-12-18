@@ -22,6 +22,10 @@
   padding: 24px 32px;
 }
 
+.form input:read-only {
+  cursor: default;
+}
+
 .checkbox-wrap {
   margin-top: 16px;
 }

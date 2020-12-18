@@ -98,6 +98,7 @@ const Register: React.FC = () => {
             handleChange={setCep}
           />
           <Input
+            readOnly={true}
             name="cidade"
             label="Cidade"
             placeholder="Cidade"
