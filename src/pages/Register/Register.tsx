@@ -1,8 +1,9 @@
-import React, { FormEvent, useState } from 'react'
+import React, { FormEvent, useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { Checkbox, Header, Input } from '@/components'
 import api from '@/services/api'
 import './styles.css'
+import Axios from 'axios'
 
 const servicesArray = ['Exames Clínicos', 'Exames Complementares', 'PPRA', 'PCMSO']
 
@@ -11,10 +12,21 @@ const Register: React.FC = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [address, setAddress] = useState('')
-  const [cep, setCep] = useState('')
+  const [city, setCity] = useState('')
+  const [cep, setCep] = useState('00000000')
   const [whatsapp, setWhatsapp] = useState('')
   const [message, setMessage] = useState('')
   const [selectedServices, setSelectedServices] = useState<string[]>([])
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      Axios.get(`https://viacep.com.br/ws/${cep}/json`)
+        .then(response => setCity(response.data.localidade))
+        .catch(() => setCity(''))
+    }, 900)
+
+    return () => clearTimeout(handler)
+  }, [cep]);
 
   const handleSelectedServices = (value: string) => {
     if (selectedServices.includes(value)) {
@@ -84,6 +96,13 @@ const Register: React.FC = () => {
             label="CEP"
             placeholder="00000-000"
             handleChange={setCep}
+          />
+          <Input
+            name="cidade"
+            label="Cidade"
+            placeholder="Cidade"
+            value={city || ''}
+            handleChange={setCity}
           />
           <Input
             name="address"
