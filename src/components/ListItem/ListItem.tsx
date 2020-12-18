@@ -9,7 +9,7 @@ type Props = {
 }
 
 const ListItem: React.FC<Props> = ({ item }: Props) => {
-  const services = item.services.split(",")
+  const services = item.services.replace(/\s*,\s*/g, ',').split(',')
 
   const cleanWhatsapp = (whatsapp) => {
     const number = whatsapp

@@ -1,5 +1,5 @@
 import React, { FormEvent, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { Checkbox, Header, Input } from '@/components'
 import api from '@/services/api'
 import './styles.css'
@@ -7,6 +7,7 @@ import './styles.css'
 const servicesArray = ['Exames Clínicos', 'Exames Complementares', 'PPRA', 'PCMSO']
 
 const Register: React.FC = () => {
+  const history = useHistory()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [address, setAddress] = useState('')
@@ -40,6 +41,7 @@ const Register: React.FC = () => {
         }
 
         await api.post('clinics', data)
+
         setMessage('Cadastro realizado com sucesso!')
         setName('')
         setEmail('')
@@ -47,6 +49,7 @@ const Register: React.FC = () => {
         setAddress('')
         setWhatsapp('')
         setSelectedServices([])
+        history.push('/')
       } catch {
         setMessage('Ocorreu um erro, tente novamente!')
       }
