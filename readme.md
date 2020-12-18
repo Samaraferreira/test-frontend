@@ -30,6 +30,7 @@ $ npm run dev
   * Abrir whatsapp
   * Pesquisar entre as clínicas cadastradas
   * Ondenar por ordem alfabética
+  * Preencher o campo cidade de acordo com o CEP, utilizando a API via cep
 
 * Onde encontrou mais dificuldade?
 
