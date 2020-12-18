@@ -20,11 +20,15 @@ Repositório da API: https://github.com/Samaraferreira/test-onyma-api
 
 * Features desenvolvidas
   * API
- 
+  * Responsividade
+  * Listagem e cadastro de clínicas
+  * Abrir whatsapp
+  * Pesquisar entre as clínicas cadastradas
+  * Ondenar por ordem alfabética
 
 * Onde encontrou mais dificuldade?
 
-  * Alterar os dados da tabela e formatá-los para salvar no banco com os atributos que achei melhor de trabalhar.
+  * Alterar os dados da tabela em nodejs e formatá-los para salvar no banco com os atributos que achei melhor de trabalhar.
 
     ```json
       -> Estrutura de antes
@@ -58,13 +62,3 @@ Repositório da API: https://github.com/Samaraferreira/test-onyma-api
 
 * Qual material de apoio buscou para a execução do exercício?
   * Configurei o webpack da forma que aprendi no curso de [Reactjs com Clean Architecture do Rodrigo Manguinho](https://www.udemy.com/course/react-com-mango/)
-
-  * Utilizei o Stack Overflow, de onde retirei o código para remover caracters que não fossem números do campo whatsapp para conectar com a API do Whatsapp.
-
-  ```ts
-    const number = whatsapp
-                    .replace(/[^A-Z\d\s]/gi, "")
-                    .replace(/ +/, " ")
-                    .replace(/ /g, "")
-  ```
-
