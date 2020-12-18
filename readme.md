@@ -1,10 +1,11 @@
 # Teste Front-end
-## deploy -> <a href="https://test-onyma.vercel.app/">Veja o site</a>
-## Repositório da API: https://github.com/Samaraferreira/test-onyma-api
 
-```bash
-$ Email: ferreirasamara,sf@gmail.com
-```
+<strong>
+Deploy -> <a href="https://test-onyma.vercel.app/">Veja o site</a>
+<br />
+Repositório da API: https://github.com/Samaraferreira/test-onyma-api
+</strong>
+
 ## Processo de desenvolvimento
 
 * Tecnologias utilizadas
@@ -51,7 +52,7 @@ $ Email: ferreirasamara,sf@gmail.com
   * API do Google Maps ou API de CEP
 
 * Qual material de apoio buscou para a execução do exercício?
-  * Me basiei no conteúdo dado no curso do [Reactjs com Clean Architecture do Rodrigo Manguinho](https://www.udemy.com/course/react-com-mango/)
+  * Configurei o webpack da forma que aprendi no curso de [Reactjs com Clean Architecture do Rodrigo Manguinho](https://www.udemy.com/course/react-com-mango/)
 
   * Utilizei o Stack Overflow, de onde retirei o código para remover caracters que não fossem números do campo whatsapp para conectar com a API do Whatsapp.
 
