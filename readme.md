@@ -3,7 +3,7 @@
 <strong>
 Deploy -> <a href="https://test-onyma.vercel.app/">Veja o site</a>
 <br />
-Repositório da API: https://github.com/Samaraferreira/test-onyma-api
+Repositório da API: https://github.com/Samaraferreira/test-api
 </strong>
 
 ## Processo de desenvolvimento
