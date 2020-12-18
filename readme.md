@@ -9,6 +9,7 @@ Repositório da API: https://github.com/Samaraferreira/test-onyma-api
 ## Processo de desenvolvimento
 
 * Tecnologias utilizadas
+  * Figma
   * webpack
   * typescript
   * react
