@@ -18,6 +18,10 @@ Repositório da API: https://github.com/Samaraferreira/test-onyma-api
   * node.js
   * mongoDB
 
+* Features desenvolvidas
+  * API
+ 
+
 * Onde encontrou mais dificuldade?
 
   * Alterar os dados da tabela e formatá-los para salvar no banco com os atributos que achei melhor de trabalhar.
