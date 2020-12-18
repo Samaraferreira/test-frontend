@@ -33,7 +33,7 @@ $ npm run dev
 
 * Onde encontrou mais dificuldade?
 
-  * Alterar os dados da tabela em nodejs e formatá-los para salvar no banco com os atributos que achei melhor de trabalhar.
+  * Consumir os dados da tabela em nodejs e formatá-los para salvar no banco com os atributos que achei melhor de trabalhar.
 
     ```json
       -> Estrutura de antes
@@ -63,7 +63,7 @@ $ npm run dev
 
 
 * O que não conseguiu fazer (e o motivo pelo qual não conseguiu)
-  * API do Google Maps ou API de CEP
+  * API do Google Maps: era necessário fazer cadastro e gerar uma API key
 
 * Qual material de apoio buscou para a execução do exercício?
   * Configurei o webpack da forma que aprendi no curso de [Reactjs com Clean Architecture do Rodrigo Manguinho](https://www.udemy.com/course/react-com-mango/)
