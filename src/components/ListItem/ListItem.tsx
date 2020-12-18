@@ -1,27 +1,27 @@
-import React from "react";
-import "./styles.css";
-import iconMaps from "@/assets/icons/icon-maps.svg";
-import iconWhatsapp from "@/assets/icons/icon-whatsapp.svg";
-import { ClinicModel } from "@/domain/ClinicModel";
+import React from 'react'
+import './styles.css'
+import iconMaps from '@/assets/icons/icon-maps.svg'
+import iconWhatsapp from '@/assets/icons/icon-whatsapp.svg'
+import { ClinicModel } from '@/domain/ClinicModel'
 
 type Props = {
-  item: ClinicModel;
-};
+  item: ClinicModel
+}
 
 const ListItem: React.FC<Props> = ({ item }: Props) => {
-  const services = item.services.split(",");
+  const services = item.services.split(",")
 
   const cleanWhatsapp = (whatsapp) => {
     const number = whatsapp
       .replace(/[^A-Z\d\s]/gi, "")
       .replace(/ +/, " ")
-      .replace(/ /g, "");
-    return number;
-  };
+      .replace(/ /g, "")
+    return number
+  }
 
   const verifyService = (service: string) => {
-    return !services.includes(service);
-  };
+    return !services.includes(service)
+  }
 
   return (
     <li className="item">
@@ -68,14 +68,14 @@ const ListItem: React.FC<Props> = ({ item }: Props) => {
         <a
           className="whatsapp"
           target="_blanck"
-          href={`https://wa.me/${cleanWhatsapp(item.whatsapp)}`}
+          href={`https://wa.me/55${cleanWhatsapp(item.whatsapp)}`}
         >
           <img className="icon" src={iconWhatsapp} alt="Whatsapp" />
           Whatsapp
         </a>
       </aside>
     </li>
-  );
-};
+  )
+}
 
-export default ListItem;
+export default ListItem

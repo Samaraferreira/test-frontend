@@ -1,6 +1,6 @@
-import React, { InputHTMLAttributes } from 'react';
+import React, { InputHTMLAttributes } from 'react'
 
-import './styles.css';
+import './styles.css'
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   label?: string
@@ -16,7 +16,7 @@ const Input: React.FC<Props> = ({ label, handleChange, ...rest }) => {
         type="text" {...rest}
       />
     </div>
-  );
-};
+  )
+}
 
-export default Input;
+export default Input

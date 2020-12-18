@@ -1,25 +1,23 @@
-import React, { FormEvent, useState } from 'react';
-import { Checkbox, Header, Input } from '@/components';
+import React, { FormEvent, useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Checkbox, Header, Input } from '@/components'
+import api from '@/services/api'
 import './styles.css'
-import api from '@/services/api';
-import { Link } from 'react-router-dom';
 
 const servicesArray = ['Exames Clínicos', 'Exames Complementares', 'PPRA', 'PCMSO']
 
 const Register: React.FC = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [address, setAddress] = useState('');
-  const [cep, setCep] = useState('');
-  const [whatsapp, setWhatsapp] = useState('');
-  const [message, setMessage] = useState('');
-  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [address, setAddress] = useState('')
+  const [cep, setCep] = useState('')
+  const [whatsapp, setWhatsapp] = useState('')
+  const [message, setMessage] = useState('')
+  const [selectedServices, setSelectedServices] = useState<string[]>([])
 
   const handleSelectedServices = (value: string) => {
     if (selectedServices.includes(value)) {
-      const updatedSubjects = selectedServices.filter(
-        (item) => item !== value,
-      )
+      const updatedSubjects = selectedServices.filter((item) => item !== value)
       setSelectedServices(updatedSubjects)
     } else {
       setSelectedServices((old) => [...old, value])
@@ -27,7 +25,7 @@ const Register: React.FC = () => {
   }
 
   const handleSubmit = async (event: FormEvent) => {
-    event.preventDefault();
+    event.preventDefault()
     const services = selectedServices.toString()
 
     if (name && email && cep && whatsapp && address && services) {
@@ -53,7 +51,7 @@ const Register: React.FC = () => {
         setMessage('Ocorreu um erro, tente novamente!')
       }
     } else {
-      setMessage('Preencha todos os campos');
+      setMessage('Preencha todos os campos')
     }
   }
 
